@@ -11,5 +11,5 @@
 - [ ] [Discordjs Docs](https://discord.js.org/docs/packages/builders/1.6.1)
 - [ ] [Setup Javascript / Nodejs Project with ES6 + Babel 7 + ESLint + Airbnb + Prettier](https://gist.github.com/vukhanhtruong/670c6b4d1c02a5798cb40a50762c7548)
 - [ ] [Nodejs 기본설정2 - Babel, Nodemon](https://shlee0882.tistory.com/231)
-- [ ] [Creating Discord Bot in NodeJS](https://youtu.be/5UOMuTWrh6Q)
+- [ ] [How to make a Discord Bot for Beginners (Discord.js v14)](https://youtu.be/KZ3tIGHU314)
 - [ ] 

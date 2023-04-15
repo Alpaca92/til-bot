@@ -1,17 +1,23 @@
+import { Client, IntentsBitField } from 'discord.js';
 import dotenv from 'dotenv';
+
 dotenv.config();
 
-// Require the necessary discord.js classes
-const { Client, Events, GatewayIntentBits } = require('discord.js');
-
-// Create a new client instance
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
-
-// When the client is ready, run this code (only once)
-// We use 'c' for the event parameter to keep it separate from the already defined 'client'
-client.once(Events.ClientReady, (c) => {
-  console.log(`Ready! Logged in as ${c.user.tag}`);
+const client = new Client({
+  intents: [
+    IntentsBitField.Flags.Guilds,
+    IntentsBitField.Flags.GuildMembers,
+    IntentsBitField.Flags.GuildMessages,
+    IntentsBitField.Flags.MessageContent,
+  ],
 });
 
-// Log in to Discord with your client's token
+client.on('ready', (client) => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+
+client.on('messageCreate', (message) => {
+  console.log(message);
+});
+
 client.login(process.env.DISCORD_TOKEN);
